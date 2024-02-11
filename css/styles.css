@@ -611,10 +611,7 @@ section {
     background-color: #31d0aa;
 }
 
-.email-btn {
-    display: flex;
-    align-items: baseline;
-    
+.email-btn {   
 }    
 .footer-form{
     display: flex;
@@ -631,45 +628,48 @@ section {
     margin-bottom: 16px;
 }
 .input-email::placeholder {
-    padding: 8px 16px;
     color:rgba(255, 255, 255, 1);
 }
 .input-email {
     width: 264px;
     height: 40px;
+    font-size: 12px;
+     font-weight: 400;
+    line-height: 2;
+        /* 200% */
+    letter-spacing: 0.04em;
     background: transparent;
     border-radius: 4px;
     border: 1px solid var(--WHITE, #FFF);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    margin-top: 16px;
+    padding-left: 16px;
 }
 .input-btn {
-    width: 165px;
-    min-height: 40px;
-    color: var(--WHITE, #FFF);
+    min-width: 165px;
+    height: 40px;
+    color: #FFF;
     text-align: start;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
     background-color: #4D5AE5;
     border-radius: 4px;
-    padding-left: 24px;
+    border: none;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+        /* 150% */
+    letter-spacing: 0.04em;
+    cursor: pointer;
 }
 .send-icon {
     width: 24px;
     height: 24px;
-    position: absolute;
-    right: 24px;
-    top: 8px;
+    margin-left: 16px;
     fill: rgba(255, 255, 255, 1);
 }
-.form-send-icon {
-    position: relative;
-    margin: 8px 24px;
-}
-
 
 
 
