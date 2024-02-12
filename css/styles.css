@@ -882,7 +882,7 @@ section {
 .input-check:hover +.span-checkbox {
     background-color: #404bbf;
 }
-.input-check:checked + .span-icon {
+.input-check:checked + .span-checkbox {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
