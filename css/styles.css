@@ -628,7 +628,7 @@ section {
     margin-bottom: 16px;
 }
 .input-email::placeholder {
-    color:rgba(255, 255, 255, 1);
+    color: #ffffff;
 }
 .input-email {
     width: 264px;
@@ -647,7 +647,7 @@ section {
 .input-btn {
     min-width: 165px;
     height: 40px;
-    color: #FFF;
+    color: #ffffff;
     text-align: start;
     background-color: #4D5AE5;
     border-radius: 4px;
@@ -697,6 +697,7 @@ section {
     min-height: 584px;
     border-radius: 4px;
     background: #FCFCFC;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
 }
 .modal-form {
@@ -710,9 +711,32 @@ section {
     height: 24px;
     border-radius: 50%;
     padding: 0;
-    border: 1px rgba(46, 47, 66, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: rgba(231, 233, 252, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.close-img {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-button:hover,
+.modal-close-button:focus {
+    background-color: #404bbf;
+    border: none;
+}
+.close-img:hover,
+.close-img:focus {
+    fill: #FFFFFF;
+}
+
 .modal-title {
     color: var(--NAVY-BLUE, #2E2F42);
         text-align: center;
@@ -738,6 +762,7 @@ section {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input {
     width: 100%;
@@ -748,6 +773,7 @@ section {
     padding-top: 11px;
     padding-bottom: 11px;
     outline: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input:hover,
 .input:focus {
@@ -819,6 +845,7 @@ section {
     width: 16px;
     height: 16px;
     border: 1px gba(46, 47, 66, 0.40);
+    
 }
 .span-checkbox {
     width: 16px;
@@ -826,12 +853,19 @@ section {
     border: 1px solid rgba(46, 47, 66, 0.40);
     border-radius: ;
     margin-right: 8px;
-}
-.span-icon {
     display: flex;
     align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+.span-icon {
+    width: 10px;
+    height: 8px;
+    fill: transparent;
     
 }
-.input-check:checked + .span-checkbox + .span-icon{
+.input-check:checked + .span-checkbox {
     background-color: #404BBF;
+    fill: rgba(244, 244, 253, 1);
+    border: none;
 }
